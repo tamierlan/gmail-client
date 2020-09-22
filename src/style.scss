@@ -85,7 +85,8 @@ header {
 
 /* sidebar */
 .sidebar {
-  width: 220px;
+  float: left;
+  width: 14%;
   /* border: 1px solid; */
   padding: 10px;
   .compose {
@@ -109,7 +110,7 @@ header {
   }
   .menu {
     /* border: 1px solid; */
-    min-height: 400px;
+    min-height: 300px;
     overflow-y: auto;
     .left-tag {
       padding: 5px;
@@ -164,4 +165,13 @@ header {
     width: auto;
     margin-right: 5px;
   }
+}
+
+main {
+  float: right;
+  width: 84%;
+  border: 1px solid black;
+  height: calc(100vh - 100px);
+  margin: 10px 10px 10px 0px;
+  overflow: scroll;
 }
