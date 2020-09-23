@@ -167,6 +167,7 @@ header {
   }
 }
 
+/* main */
 main {
   float: right;
   width: 84%;
@@ -175,3 +176,15 @@ main {
   margin: 10px 10px 10px 0px;
   overflow: scroll;
 }
+.tabs {
+  display: flex;
+  line-height: 58px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+.primary, .social, .promotions {
+  width: 33.3%
+}
+// .primary {
+//
+// }

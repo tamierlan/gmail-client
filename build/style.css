@@ -128,6 +128,7 @@ header {
     width: auto;
     margin-right: 5px; }
 
+/* main */
 main {
   float: right;
   width: 84%;
@@ -135,3 +136,12 @@ main {
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
   overflow: scroll; }
+
+.tabs {
+  display: flex;
+  line-height: 56px;
+  width: 100%;
+  border-bottom: 1px solid grey; }
+
+.primary, .social, .promotions {
+  width: 33.3%; }
