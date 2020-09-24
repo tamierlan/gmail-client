@@ -1204,15 +1204,3 @@ var state = [{
 console.log(state[12]);
 
 document.querySelector('.tabs');
-
-// {
-//   id: 0,
-//   name: 'Jain',
-//   category: 'primary',
-//   sentData: '08.25.2020',
-//   read: false,
-//   text: {
-//     title: 'job offering',
-//     message: 'how are you, you are about to get hired'
-//   }
-// },

@@ -15,21 +15,26 @@ body {
   padding: 0;
   margin: 0;
 }
+
 * {
   box-sizing: border-box;
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   .header-icon {
     max-width: 20px;
     max-height: 20px;
+
     .lg {
       max-width: 30px;
       max-height: 30px;
     }
   }
+
   .left {
     display: flex;
     justify-content: flex-start;
@@ -38,9 +43,11 @@ header {
     width: 220px;
     /* border: 1px solid; */
     padding-left: 10px;
+
     img {
       margin: auto 10px;
     }
+
     p {
       font-size: 24px;
       color: gray;
@@ -52,12 +59,15 @@ header {
     justify-content: flex-end;
     align-items: center;
     flex: 1;
+
     img {
       margin: 0 10px;
     }
   }
+
   .middle {
     flex: 5;
+
     input {
       background: url('../images/search-icon.png') no-repeat;
       background-size: 18px;
@@ -74,6 +84,7 @@ header {
       min-width: 240px;
       max-width: 600px;
       width: 90%;
+
       &:focus {
         border: none;
         background-color: transparent;
@@ -89,6 +100,7 @@ header {
   width: 14%;
   /* border: 1px solid; */
   padding: 10px;
+
   .compose {
     box-shadow: 0 0 1px 1px lightgray;
     width: 120px;
@@ -100,24 +112,29 @@ header {
     user-select: none;
     margin-bottom: 15px;
     transition: linear 0.2s;
+
     &:hover {
       box-shadow: 1px 3px 5px 2px lightgray;
     }
+
     img {
       width: 30px;
       height: 30px;
     }
   }
+
   .menu {
     /* border: 1px solid; */
     min-height: 300px;
     overflow-y: auto;
+
     .left-tag {
       padding: 5px;
       padding-left: 15px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
+
       img {
         height: 20px;
         width: 20px;
@@ -131,15 +148,18 @@ header {
 .meet {
   border-top: 2px groove lightgray;
   border-bottom: 1px solid lightgray;
+
   p {
     padding-left: 15px;
   }
+
   .left-tag {
     padding: 5px;
     padding-left: 15px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
     img {
       height: 20px;
       width: 20px;
@@ -150,16 +170,19 @@ header {
 
 /* hangouts */
 .hangouts {
+
   /* border: 1px solid; */
   .hangout-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     div:first-child {
       display: flex;
       align-items: center;
     }
   }
+
   img {
     height: 24px;
     width: auto;
@@ -176,18 +199,73 @@ main {
   margin: 10px 10px 10px 0px;
   overflow: scroll;
 }
-.tabs {
-  background: transparent;
-  border-bottom: none;
-  white-space: nowrap
-  display: flex;
-  line-height: 58px;
+
+/* tabs */
+
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin: auto;
+  margin-left: 0;
+  width: 1000px;
+}
+
+.tabs ul {
+  display: inline-flex;
+  background: #fbfbfb;
+  margin-bottom: 25px;
+}
+
+.tabs ul li {
+  width: 250px;
+  padding: 15px;
+  border-right: 1px solid #dddddd;
+  text-align: center;
+  color: #131212;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tabs ul li .icon {
+  font-size: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.tabs ul li:last-child {
+  border-right: 0px;
+}
+
+.tabs ul li:before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
   width: 100%;
-  border-bottom: 1px solid grey;
+  height: 2px;
+  background: #e00429;
+  opacity: 0;
+  transition: all 0.2s ease;
 }
-.primary, .social, .promotions {
-  width: 33.3%
+
+.tabs ul li:hover,
+.tabs ul li.active {
+  background: #ecf0ec;
+  color: #d32a41;
 }
-// .primary {
-//
-// }
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before {
+  opacity: 1;
+}
