@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+
 body {
   padding: 0;
   margin: 0; }
@@ -137,11 +139,79 @@ main {
   margin: 10px 10px 10px 0px;
   overflow: scroll; }
 
-.tabs {
-  display: flex;
-  line-height: 56px;
-  width: 100%;
-  border-bottom: 1px solid grey; }
+/* tabs */
 
-.primary, .social, .promotions {
-  width: 33.3%; }
+*{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+  font-family: 'Montserrat', sans-serif;
+ 
+
+}
+
+.container{
+  margin: auto;
+  margin-left: 0;
+  width: 1000px;
+  
+}
+
+.tabs ul{
+	display: inline-flex;
+	background: #fbfbfb;
+  margin-bottom: 25px;
+}
+
+.tabs ul li{
+	width: 250px;
+	padding: 15px;
+	border-right: 1px solid #dddddd;
+	text-align: center;
+	color: #131212;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 3px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+  position: relative;
+ 
+}
+
+.tabs ul li .icon{
+	font-size: 20px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.tabs ul li:last-child{
+	border-right: 0px;
+}
+
+.tabs ul li:before{
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #e00429;
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+.tabs ul li:hover,
+.tabs ul li.active{
+	background: #ecf0ec;
+	color: #d32a41;
+}
+
+.tabs ul li:hover:before,
+.tabs ul li.active:before{
+	opacity: 1;
+}
+
+
+
