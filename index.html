@@ -10,88 +10,75 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <div class="left">
-      <div><img class="header-icon" src="images/burger-menu.png" /></div>
-      <div><img class="header-icon lg" src="images/gmail-icon.png" /></div>
+      <div><img class="header-icon" src="images/burger-menu.png" alt="burger-menu" /></div>
+      <div><img class="header-icon lg" src="images/gmail-icon.png" alt="gmail-icon" /></div>
       <div>
         <p>Gmail</p>
       </div>
     </div>
 
+    <!-- Search bar -->
     <div class="middle">
       <input id="search" type="text" placeholder="Search mail" />
     </div>
 
+    <!-- Header account icons -->
     <div class="right">
-      <img class="header-icon" src="images/question-icon.png" />
-      <img class="header-icon" src="images/settings-icon.png" />
-      <img class="header-icon" src="images/apps-icon.png" />
-      <img class="header-icon lg" src="images/user-icon.png" />
+      <img class="header-icon" src="images/question-icon.png" alt="question-icon" />
+      <img class="header-icon" src="images/settings-icon.png" alt="settings-icon" />
+      <img class="header-icon" src="images/apps-icon.png" alt="apps-icon" />
+      <img class="header-icon lg" src="images/user-icon.png" alt="user-icon" />
     </div>
   </header>
-  <aside class="sidebar">
-    <div class="compose"><img src="./images/plus-icon.png" />Compose</div>
 
+  <!-- Aside -->
+  <aside class="sidebar">
+    <div class="compose"><img src="./images/plus-icon.png" alt="plus-icon" />Compose</div>
     <div class="menu">
       <div class="inbox left-tag">
-        <img src="./images/inbox-icon.png" />
+        <img src="./images/inbox-icon.png" alt="inbox-icon" />
         <span>Inbox</span>
       </div>
       <div class="starred left-tag">
-        <img src="./images/star-icon.png" />
+        <img src="./images/star-icon.png" alt="star-icon" />
         <span>Starred</span>
       </div>
       <div class="trash left-tag">
-        <img src="./images/trash-icon.png" />
+        <img src="./images/trash-icon.png" alt="trash-icon" />
         <span>Trash</span>
       </div>
       <div class="spam left-tag">
-        <img src="images/spam-icon.png" />
+        <img src="images/spam-icon.png" alt="spam-icon" />
         <span>Spam</span>
       </div>
     </div>
 
+    <!-- Aside Meet Section -->
     <div class="meet">
       <p>Meet</p>
       <div class="left-tag">
-        <img src="./images/video-icon.png" />
+        <img src="./images/video-icon.png" alt="video-icon" />
         <span>Start a meeting</span>
       </div>
       <div class="left-tag">
-        <img src="./images/meeting-icon.png" />
-        <span>Join a meetinga</span>
+        <img src="./images/meeting-icon.png" alt="meeting-icon" />
+        <span>Join a meeting</span>
       </div>
     </div>
 
+    <!-- Aside Hangout Section -->
     <div class="hangouts">
       <p>Hangouts</p>
       <div class="hangout-user">
         <div>
-          <img src="./images/user-icon.png" />
+          <img src="./images/user-icon.png" alt="user-icon" class="user-icon-hangouts"/>
           <span>Peter</span>
         </div>
         <div>
-          <img src="./images/plus-icon.png" />
-        </div>
-      </div>
-      <hr style="width: 90%" />
-      <div class="hangout-user users">
-        <div style="flex: 1">
-          <img src="./images/user-icon.png" />
-        </div>
-        <div style="flex: 4">
-          <p style="margin: 0">Peter</p>
-          <p style="margin: 0">Invitation sent</p>
-        </div>
-      </div>
-      <div class="hangout-user users">
-        <div style="flex: 1">
-          <img src="./images/user-icon.png" />
-        </div>
-        <div style="flex: 4">
-          <p style="margin: 0">Nancy</p>
-          <p style="margin: 0">Thank you!</p>
+          <img src="./images/plus-icon.png" alt="plus-icon" />
         </div>
       </div>
     </div>
@@ -102,13 +89,11 @@
     <!-- Container for checkbox, refresh, three dots, left and right arrows -->
     <div class="main-buttons">
       <div class=checkbox>
-      <label class="container">
-        <input class="checkboxInput" type="checkbox">
-        <!-- <span class="checkmark"></span> -->
-      </label>
+        <label class="container">
+          <input class="checkboxInput" type="checkbox">
+        </label>
       </div>
-
-      <div class ="refresh">
+      <div class="refresh">
         <i class="fa fa-repeat" aria-hidden="true"></i>
       </div>
 
@@ -116,30 +101,28 @@
         <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
       </div>
 
-      <div class = "range">
-        <span class="rangeNumber">1-50</a>
+      <div class="range">
+        <span class="rangeNumber">1-50</span>
       </div>
 
       <span class="of">of</span>
 
-      <div class = "total">
-        <span class="totalNumber">20356</a>
-      </div>    
-      
-      <div class = "arrows">
-      <i class="fa fa-chevron-left" aria-hidden="true"></i>
-      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      <div class="total">
+        <span class="totalNumber">20356</span>
       </div>
 
-      <div class = "keyboard">
-      <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+      <div class="arrows">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </div>
 
+      <div class="keyboard">
+        <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+      </div>
     </div>
 
     <!-- Container for tabs and email list -->
     <div class="main-emails-section">
-
       <!-- Container for tabs-->
       <div class="container">
         <div class="tabs">
@@ -164,7 +147,7 @@
             </li>
           </ul>
         </div>
-
+      </div>
       <!-- List of email-->
       <div>
         <ul class="mail-list-wrapper">
@@ -173,9 +156,7 @@
       </div>
 
     </div>
-
   </main>
+  <script src="../build/index.js"></script>
 </body>
-<script type="text/javascript" src="../build/index.js"></script>
-
 </html>

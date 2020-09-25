@@ -11,10 +11,17 @@ $text-color: grey;
 $breakpoint-tablet: 768px;
 $breakpoint-2: 960px;
 
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
-  background-color: lightgray;
 }
 
 * {
@@ -25,6 +32,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   .header-icon {
     max-width: 20px;
@@ -99,7 +108,6 @@ header {
 .sidebar {
   float: left;
   width: 14%;
-  /* border: 1px solid; */
   padding: 10px;
 
   .compose {
@@ -125,7 +133,6 @@ header {
   }
 
   .menu {
-    /* border: 1px solid; */
     min-height: 300px;
     overflow-y: auto;
 
@@ -135,7 +142,9 @@ header {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-       
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+
       img {
         height: 20px;
         width: 20px;
@@ -154,7 +163,9 @@ header {
 /* meet */
 .meet {
   border-top: 2px groove lightgray;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 2px groove lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   p {
     padding-left: 15px;
@@ -177,13 +188,19 @@ header {
 
 /* hangouts */
 .hangouts {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px groove lightgray;
+  padding-left: 15px;
 
   /* border: 1px solid; */
   .hangout-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
     div:first-child {
       display: flex;
       align-items: center;
@@ -201,22 +218,13 @@ header {
 main {
   float: right;
   width: 84%;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
   overflow: scroll;
 }
 
 /* tabs */
-
-* {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .container {
   margin: auto;
   margin-left: 0;
@@ -286,18 +294,17 @@ main {
 .main-buttons {
   height: 40px;
   width: 100%;
-  border: 1px solid black; 
   color: grey;
   display: flex;
   font-size: 16px; 
   line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px lightgray solid;
 }
-
 
 .fa-repeat, .fa-ellipsis-v{
   margin: 0 10px;
 }
-
 
 .rangeNumber, .totalNumber {
   position: relative;
@@ -321,45 +328,29 @@ main {
 .main-buttons i:hover{
   color: black;
 }
-// .main-buttons span, i:hover {
-//   background-color: lightgrey;
-// }
 
 .of{
   position: relative;
   left: 872px;
 }
 
-
-
-// .container {
-//     cursor: pointer;
-//     font-size: 26px;
-//   }
-
 .checkbox .checkboxInput{
   font-size: 18px;
 }
-// .checkboxInput{
-//     height: 50px;
-//     width: 80px;
-//     background-color: #eee;
-// }
 
 .checkboxInput:checked:before{
   background-color:black;
 } 
 
-
 .tabs {
   display: flex;
   line-height: 58px;
   width: 100%;
-  border-bottom: 1px solid grey;
 }
 .primary, .social, .promotions {
   width: 33.3%
 }
-// .primary {
-//
-// }
+
+.mail-list-wrapper {
+  padding: 0 20px;
+}
