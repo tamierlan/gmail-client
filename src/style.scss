@@ -14,6 +14,7 @@ $breakpoint-2: 960px;
 body {
   padding: 0;
   margin: 0;
+  background-color: lightgray;
 }
 
 * {
@@ -230,7 +231,7 @@ main {
 
 .tabs ul li {
   width: 250px;
-  padding: 15px;
+  padding: 5px;
   border-right: 1px solid #dddddd;
   text-align: center;
   color: #131212;
@@ -281,3 +282,84 @@ main {
 .mail-wrapper {
   background-color: silver;
 }
+
+.main-buttons {
+  height: 40px;
+  width: 100%;
+  border: 1px solid black; 
+  color: grey;
+  display: flex;
+  font-size: 16px; 
+  line-height: 40px;
+}
+
+
+.fa-repeat, .fa-ellipsis-v{
+  margin: 0 10px;
+}
+
+
+.rangeNumber, .totalNumber {
+  position: relative;
+  left: 870px;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.arrows .fa-chevron-left, .fa-chevron-right{
+  position:relative; 
+  left: 880px;
+  margin: 0 10px;
+}
+
+.keyboard .fa-keyboard-o{
+  position:relative; 
+  left: 890px;
+  color: black;
+}
+
+.main-buttons i:hover{
+  color: black;
+}
+// .main-buttons span, i:hover {
+//   background-color: lightgrey;
+// }
+
+.of{
+  position: relative;
+  left: 872px;
+}
+
+
+
+// .container {
+//     cursor: pointer;
+//     font-size: 26px;
+//   }
+
+.checkbox .checkboxInput{
+  font-size: 18px;
+}
+// .checkboxInput{
+//     height: 50px;
+//     width: 80px;
+//     background-color: #eee;
+// }
+
+.checkboxInput:checked:before{
+  background-color:black;
+} 
+
+
+.tabs {
+  display: flex;
+  line-height: 58px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+.primary, .social, .promotions {
+  width: 33.3%
+}
+// .primary {
+//
+// }
