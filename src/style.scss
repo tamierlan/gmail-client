@@ -134,7 +134,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-
+       
       img {
         height: 20px;
         width: 20px;
@@ -142,6 +142,12 @@ header {
       }
     }
   }
+}
+.left-tag:hover {
+  background-color: rgb(168, 162, 171);
+}
+.inbox {
+  background-color: rgb(219, 96, 94) ;
 }
 
 /* meet */
