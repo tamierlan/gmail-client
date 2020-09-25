@@ -112,11 +112,11 @@ header {
 
   .compose {
     box-shadow: 0 0 1px 1px lightgray;
-    width: 120px;
+    width: 140px;
     align-items: center;
     justify-content: space-evenly;
     display: flex;
-    border-radius: 50px;
+    border-radius: 30px;
     padding: 10px;
     user-select: none;
     margin-bottom: 15px;
@@ -157,7 +157,8 @@ header {
   background-color: rgb(168, 162, 171);
 }
 .inbox {
-  background-color: rgb(219, 96, 94) ;
+  background-color: #FCE8E6;
+  color: #DC3C31;
 }
 
 /* meet */
@@ -228,19 +229,17 @@ main {
 .container {
   margin: auto;
   margin-left: 0;
-  width: 1000px;
 }
 
 .tabs ul {
   display: inline-flex;
   background: #fbfbfb;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .tabs ul li {
   width: 250px;
   padding: 5px;
-  border-right: 1px solid #dddddd;
   text-align: center;
   color: #131212;
   text-transform: uppercase;
@@ -288,7 +287,7 @@ main {
   margin-top: 10px;
 }
 .mail-wrapper {
-  background-color: silver;
+  background-color: lightgray;
 }
 
 .main-buttons {
@@ -348,7 +347,7 @@ main {
   width: 100%;
 }
 .primary, .social, .promotions {
-  width: 33.3%
+  width: 33.3%;
 }
 
 .mail-list-wrapper {

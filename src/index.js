@@ -16,6 +16,4 @@ for (var i = 0; i < state.length; i++) {
   ul.appendChild(li)
 }
 
-
-
 console.log(state[2])
