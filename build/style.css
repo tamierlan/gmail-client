@@ -96,6 +96,12 @@ header {
         width: 20px;
         margin-right: 15px; }
 
+.left-tag:hover {
+  background-color: #a8a2ab; }
+
+.inbox {
+  background-color: #db605e; }
+
 /* meet */
 .meet {
   border-top: 2px groove lightgray;
