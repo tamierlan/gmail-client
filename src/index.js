@@ -1,19 +1,180 @@
-const data = [
-  {"next":{"page":2,"limit":50},"total":76,"items":[{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Seytech Co","senderEmail":"support@seytech.com","messageTitle":"Enrollment start date","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"When you would like to join us?","attachments":[{"text":"seytech logo","icon":"https://www.seytech.co/images/logo.png"}],"date":"2020-09-24T22:56:29.565Z"},{"message":"Here is the info about our start date","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Heroku","senderEmail":"heroku@heroku.com","messageTitle":"Excited to announce our new feature","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Now you can use for free $$$","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Facebook","senderEmail":"facebook@facebook.com","messageTitle":"Today is your friends birthday!","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Time to congratulate your friends on their birthday","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":false},"senderName":"Michael Dunn","senderEmail":"m@dunn.com","messageTitle":"Don't forget about our meeting today...","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Hey keep an eye on calendar and don't forget about our meeting today.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"AICamp","date":"2020-09-24T22:56:29.565Z","senderEmail":"admin@atiglobal.org","messageTitle":"New AI Course Scheduled: 4-Weeks Practical Python for Machine Learning.","isRead":false,"messages":[{"message":"We are starting 2nd Cohort of the 4-weeks crash course Practical Python for Machine Learning , starting on Sep 28th. This course covers the key Python skills you will need so you can start using Python for machine learning. You learn Python skills by completing a series of curated projects, assigned pre-reading materials and home works.","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Uber","senderEmail":"support@uber.com","messageTitle":"This offer ends soon","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Unlock your Uber Eats promo.ADD THE PROMO CODE BELOW BEFORE YOU CHECK OUT. PROMO CODE: useatnow","attachments":[],"date":"2020-09-24T22:56:29.565Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":true},"senderName":"GoFundMe","senderEmail":"hello@marketing.gofundme.com","messageTitle":"Please, your help is needed","isRead":false,"date":"2020-09-24T22:56:29.565Z","messages":[{"message":"Your support is needed to help recovery efforts after the California wildfires.","attachments":[],"date":"2020-09-24T22:56:29.569Z"}]},{"tags":{"isStarred":true,"isTrash":false,"isSpam":true},"senderName":"Zuzanna Kozlecka","senderEmail":"zkozlecka@mail.edu","messageTitle":"Please, your help is needed","isRead":false,"date":"2020-09-24T22:56:29.569Z","messages":[{"message":"You have (1) Unread Message from the financial aid office. Kindly click here click here to read it. Unread messages are automatically deleted after 24 hours.","attachments":[],"date":"2020-09-24T22:56:29.569Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.569Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.569Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.569Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.569Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.569Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.569Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.569Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.569Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.570Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.570Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.571Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.571Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.571Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.571Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.571Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.571Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.571Z"}]},{"tags":{"isStarred":false,"isTrash":false,"isSpam":false},"senderName":"Chase","senderEmail":"no-reply@alertsp.chase.com","messageTitle":"Your credit card statement is ready","isRead":false,"date":"2020-09-24T22:56:29.571Z","messages":[{"message":"Your credit card statement is ready.","attachments":[],"date":"2020-09-24T22:56:29.571Z"}]}]}
-];
-const state = data[0].items
-
-for (var i = 0; i < state.length; i++) {
-  const li = document.createElement('li');
-  li.className = 'mail-class'
-  const div = document.createElement('div');
-  div.className = 'mail-wrapper'
-  const sender_name = document.createElement('a');
-  sender_name.innerHTML = state[i].senderName
-  div.appendChild(sender_name)
-  li.appendChild(div)
-  var ul = document.querySelector('.mail-list-wrapper')
-  ul.appendChild(li)
+// call big bang by category
+const primary = () => {
+  big_bang('primary');
 }
+const social = () => {
+  big_bang('social')
+}
+const promotions = () => {
+  big_bang('promotions')
+}
+big_bang('primary')
 
+function big_bang(category) {
+  document.querySelector('#primary').className = '';
+  document.querySelector('#social').className = '';
+  document.querySelector('#promotions').className = '';
+  document.querySelector('#' + category).className = 'active';
+
+  fetch('https://polar-reaches-49806.herokuapp.com/api?page=1&category=' + category)
+  .then(res => res.json())
+  .then(res => {
+    // state
+    const state = {
+      gmails: res.items,
+      page: res.next.page,
+      limit: res.next.limit,
+      total: res.total
+    };
+
+    console.log(state.gmails[1])
+
+    // looping each email
+
+    const ul = document.querySelector('.mail-list-wrapper')
+    ul.innerHTML = '';
+
+    for (var  index = 0; index < state.gmails.length; index++) {
+      // generating elements || tags
+      const li = document.createElement('li');
+      const dots = document.createElement('i');
+      const checkbox_div = document.createElement('div');
+      const check_box = document.createElement('input');
+      const star_div = document.createElement('div');
+      const star = document.createElement('i');
+      const name_div = document.createElement('div');
+      const sender_name = document.createElement('a');
+      const title_div = document.createElement('div');
+      const message_title = document.createElement('a');
+      const email_date = document.createElement('a');
+
+      // adding classes
+      li.className = 'list-emails';
+      dots.className = 'fas fa-th';
+      checkbox_div.className = 'checkbox-div';
+      star_div.className = 'star-div';
+      star.className = 'far fa-star';
+      name_div.className = 'name-div';
+      title_div.className = 'title-div';
+      check_box.className = 'email-check-box'
+      check_box.type = 'checkBox';
+      email_date.className = 'email-date';
+
+      // display text
+      sender_name.innerHTML = state.gmails[index].senderName;
+      message_title.innerHTML = state.gmails[index].messageTitle;
+      email_date.innerHTML = '11: 02 AM';
+
+      // seting attribute
+      li.setAttribute('page', index)
+      li.addEventListener('click', single_page)
+
+
+      // append
+      checkbox_div.appendChild(check_box);
+      star_div.appendChild(star)
+      name_div.appendChild(sender_name);
+      title_div.appendChild(message_title)
+      li.appendChild(dots);
+      li.appendChild(checkbox_div)
+      li.appendChild(star_div);
+      li.appendChild(name_div);
+      li.appendChild(title_div);
+      li.appendChild(email_date);
+
+      ul.appendChild(li)
+
+      // avoid clicking list items
+      var box_star_value = false;
+
+      // checkbox avoiding
+      checkbox_div.addEventListener ('mouseover', function hover_box(){
+        box_star_value = true;
+        console.log('overing')
+      });
+      checkbox_div.addEventListener ('mouseleave', function leave_box(){
+        box_star_value = false;
+        console.log('leaving')
+      });
+      // star avoiding
+      star_div.addEventListener ('mouseover', function hover_star(){
+        box_star_value = true;
+        console.log('overing')
+      });
+      star_div.addEventListener ('mouseleave', function leave_star(){
+        box_star_value = false;
+        console.log('leaving')
+      });
+
+
+
+      // single page
+
+      function single_page() {
+        if (!box_star_value) {
+          const id = this.getAttribute('page');
+          const parent = document.querySelector('.main-emails-section');
+          const wrapper = document.createElement('div');
+          const user_icon = document.createElement('i');
+          const info_div = document.createElement('div');
+          const message_title = document.createElement('h2');
+          const sender_email = document.createElement('a');
+          const date = document.createElement('a');
+          const star_div = document.createElement('div');
+          const star = document.createElement('i');
+          const reply_div = document.createElement('div');
+          const reply = document.createElement('i');
+          const dots_div = document.createElement('div')
+          const dots = document.createElement('i');
+          const title = document.createElement('h3');
+          // const dots_div = document.createElement('div');
+          // const sender_email = document.createElement('a');
+
+
+
+
+          parent.innerHTML = '';
+          message_title.innerHTML = state.gmails[id].messageTitle;
+          sender_email.innerHTML = state.gmails[id].senderEmail;
+          date.innerHTML = state.gmails[id].date;
+          title.innerHTML = state.gmails[id].messages[0].message;
+          // message_title.innerHTML = state.gmails[id].messageTitle;
+          // sender_email.innerHTML = state.gmails[id].senderEmail;
+          // message_title.innerHTML = state.gmails[id].messageTitle;
+          // sender_email.innerHTML = state.gmails[id].senderEmail;
+
+
+          wrapper.className = 'single-page';
+          user_icon.className = 'far fa-user-circle';
+          info_div.className = 'info-div';
+          star_div.className = 'single-star-div';
+          star.className = 'far fa-star';
+          reply_div.className = 'reply-div';
+          reply.className = 'fas fa-reply';
+          dots_div.className = 'dots-div';
+          dots.className = 'fas fa-ellipsis-v';
+          date.className = 'single-date'
+          title.className = 'single-title';
+          // info_div.className = 'info-div';
+          info_div.appendChild(message_title);
+          info_div.appendChild(sender_email);
+          info_div.appendChild(date);
+          star_div.appendChild(star);
+          info_div.appendChild(star_div);
+          reply_div.appendChild(reply);
+          info_div.appendChild(reply_div);
+          dots_div.appendChild(dots);
+          info_div.appendChild(dots_div);
+          info_div.appendChild(title);
+          // star_div.appendChild(star);
+          // info_div.appendChild(star_div);
+
+          wrapper.appendChild(user_icon);
+          wrapper.appendChild(info_div);
+          parent.appendChild(wrapper);
+        }
+      }
+    }
+  });
+}
 console.log(state[2])

@@ -217,8 +217,9 @@ header {
 
 /* main */
 main {
-  float: right;
+  // float: right;
   width: 84%;
+
   border: 1px solid lightgray;
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
@@ -229,6 +230,7 @@ main {
 .container {
   margin: auto;
   margin-left: 0;
+  width: 100%;
 }
 
 .tabs ul {
@@ -283,9 +285,118 @@ main {
 .tabs ul li.active:before {
   opacity: 1;
 }
-.mail-class {
-  margin-top: 10px;
+
+
+
+
+
+// Tamerlan
+.list-emails {
+  transition: all 0.1s linear;
+  width: 100%;
+  border: 1px solid white;
+  border-top: 1px solid silver;
+  line-height: 40px;
 }
+.list-emails:hover {
+  width: 100%;
+  border: 1px solid silver;
+  border-bottom: 1px solid white;
+  box-shadow: 0px 1px 6px -1px rgba(0,0,0,1);
+}
+
+
+.fa-th {
+  margin: 3px;
+  color: silver;
+  transition: all 0.1s linear;
+  opacity: 0;
+  line-height: 40px;
+}
+
+.list-emails:hover  .fa-th {
+  opacity: 1;
+}
+
+.checkbox-div {
+  background: rgba(0, 0, 0, 0);
+  display: inline-block;
+  margin-left: -6px;
+  width: 40px;
+  padding-left: 14px;
+  border-radius: 20px;
+  transition: all 0.1s linear;
+}
+.checkbox-div:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.email-check-box {
+  line-height: 40px;
+}
+.star-div {
+  background: rgba(0, 0, 0, 0);
+  display: inline-block;
+  margin-left: -8px;
+  width: 40px;
+  padding-left: 11px;
+  border-radius: 20px;
+  transition: all 0.1s linear;
+}
+.star-div:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.fa-star {
+  // margin-left: 11px;
+  line-height: 40px;
+}
+.name-div {
+  margin-left: 15px;
+  width: 150px;
+  display: inline-block;
+}
+.title-div {
+  margin-left: 40px;
+  width: 300px;
+  display: inline-block;
+}
+.email-date {
+  float: right;
+}
+
+.single-page {
+  display: flex;
+}
+.single-page h2 {
+  color: grey;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.single-page .single-date {
+  margin-left: 30px;
+}
+
+.single-page .fa-user-circle {
+  margin-top: 80px;
+  font-size: 60px;
+  color: grey;
+}
+.single-star-div, .reply-div,  .dots-div {
+  background: rgba(0, 0, 0, 0);
+  display: inline-block;
+  margin-left: 40px;
+  width: 40px;
+  padding-left: 11px;
+  border-radius: 20px;
+  transition: all 0.1s linear;
+}
+.single-star-div:hover, .reply-div:hover,  .dots-div:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.single-title {
+  margin-left: 100px;
+  margin-top: 100px;
+  color: black;
 .mail-wrapper {
   background-color: lightgray;
 }
