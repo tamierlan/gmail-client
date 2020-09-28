@@ -11,6 +11,14 @@ $text-color: grey;
 $breakpoint-tablet: 768px;
 $breakpoint-2: 960px;
 
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -24,6 +32,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   .header-icon {
     max-width: 20px;
@@ -98,16 +108,15 @@ header {
 .sidebar {
   float: left;
   width: 14%;
-  /* border: 1px solid; */
   padding: 10px;
 
   .compose {
     box-shadow: 0 0 1px 1px lightgray;
-    width: 120px;
+    width: 140px;
     align-items: center;
     justify-content: space-evenly;
     display: flex;
-    border-radius: 50px;
+    border-radius: 30px;
     padding: 10px;
     user-select: none;
     margin-bottom: 15px;
@@ -124,7 +133,6 @@ header {
   }
 
   .menu {
-    /* border: 1px solid; */
     min-height: 300px;
     overflow-y: auto;
 
@@ -134,6 +142,8 @@ header {
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
 
       img {
         height: 20px;
@@ -143,11 +153,20 @@ header {
     }
   }
 }
+.left-tag:hover {
+  background-color: rgb(168, 162, 171);
+}
+.inbox {
+  background-color: #FCE8E6;
+  color: #DC3C31;
+}
 
 /* meet */
 .meet {
   border-top: 2px groove lightgray;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 2px groove lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   p {
     padding-left: 15px;
@@ -170,13 +189,19 @@ header {
 
 /* hangouts */
 .hangouts {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px groove lightgray;
+  padding-left: 15px;
 
   /* border: 1px solid; */
   .hangout-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
     div:first-child {
       display: flex;
       align-items: center;
@@ -194,21 +219,14 @@ header {
 main {
   // float: right;
   width: 84%;
+
+  border: 1px solid lightgray;
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
   overflow: scroll;
 }
 
 /* tabs */
-
-* {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .container {
   margin: auto;
   margin-left: 0;
@@ -218,12 +236,12 @@ main {
 .tabs ul {
   display: inline-flex;
   background: #fbfbfb;
+  margin-bottom: 10px;
 }
 
 .tabs ul li {
   width: 250px;
-  padding: 15px;
-  border-right: 1px solid #dddddd;
+  padding: 5px;
   text-align: center;
   color: #131212;
   text-transform: uppercase;
@@ -379,4 +397,70 @@ main {
   margin-left: 100px;
   margin-top: 100px;
   color: black;
+.mail-wrapper {
+  background-color: lightgray;
+}
+
+.main-buttons {
+  height: 40px;
+  width: 100%;
+  color: grey;
+  display: flex;
+  font-size: 16px; 
+  line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 1px lightgray solid;
+}
+
+.fa-repeat, .fa-ellipsis-v{
+  margin: 0 10px;
+}
+
+.rangeNumber, .totalNumber {
+  position: relative;
+  left: 870px;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.arrows .fa-chevron-left, .fa-chevron-right{
+  position:relative; 
+  left: 880px;
+  margin: 0 10px;
+}
+
+.keyboard .fa-keyboard-o{
+  position:relative; 
+  left: 890px;
+  color: black;
+}
+
+.main-buttons i:hover{
+  color: black;
+}
+
+.of{
+  position: relative;
+  left: 872px;
+}
+
+.checkbox .checkboxInput{
+  font-size: 18px;
+}
+
+.checkboxInput:checked:before{
+  background-color:black;
+} 
+
+.tabs {
+  display: flex;
+  line-height: 58px;
+  width: 100%;
+}
+.primary, .social, .promotions {
+  width: 33.3%;
+}
+
+.mail-list-wrapper {
+  padding: 0 20px;
 }

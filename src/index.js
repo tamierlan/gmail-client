@@ -177,3 +177,4 @@ function big_bang(category) {
     }
   });
 }
+console.log(state[2])
