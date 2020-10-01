@@ -54,7 +54,6 @@ function big_bang(onePage , category) {
       deleted_email: [],
 
     };
-    console.log(state.gmails[0])
 
     const menu = document.querySelector('.menu')
     menu.addEventListener('click', function(e) {
@@ -204,9 +203,14 @@ function prepare_element(category, index, name, title, date, email, message) {
   // deleting
   right_delete.setAttribute('del', index)
   right_delete.addEventListener('click', delete_one_email);
+
+
   function delete_one_email() {
     const del = this.getAttribute('del');
     localStorage.setItem("deleted"+del, "deleted"+del);
+    // deleted_email = index;
+
+
     big_bang(onePage, category)
   }
 
