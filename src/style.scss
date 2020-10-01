@@ -116,7 +116,7 @@ header {
 .sidebar {
   // width: 200px;
   float: left;
-  width: 14%;
+  min-width: 300px;
   margin-right: 10px;
   /* border: 1px solid; */
   // border: 1px solid red;
@@ -237,10 +237,10 @@ header {
 /* main */
 main {
   // float: right;
-  width: 85%;
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
   overflow: scroll;
+  margin-left: 300px;
 }
 
 /* tabs */
@@ -412,6 +412,8 @@ main {
   border-top: 1px solid silver;
   line-height: 40px;
   cursor: pointer;
+  white-space:nowrap;
+
 }
 .list-emails:hover {
   width: 100%;
@@ -555,3 +557,20 @@ main {
   margin-top: 100px;
   color: black;
 }
+
+@media (max-width: 1060px) {
+  //  ipads and phones
+  .email-date {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .main-buttons {
+    display: none;
+  }
+}
+
+
+
+
