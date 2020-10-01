@@ -83,7 +83,7 @@ header {
 /* sidebar */
 .sidebar {
   float: left;
-  width: 14%;
+  min-width: 300px;
   margin-right: 10px;
   /* border: 1px solid; */
   height: calc(100vh - 100px); }
@@ -171,10 +171,10 @@ header {
 
 /* main */
 main {
-  width: 85%;
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
-  overflow: scroll; }
+  overflow: scroll;
+  margin-left: 300px; }
 
 /* tabs */
 * {
@@ -316,7 +316,8 @@ main {
   border: 1px solid white;
   border-top: 1px solid silver;
   line-height: 40px;
-  cursor: pointer; }
+  cursor: pointer;
+  white-space: nowrap; }
 
 .list-emails:hover {
   width: 100%;
@@ -435,3 +436,11 @@ main {
   margin-left: 100px;
   margin-top: 100px;
   color: black; }
+
+@media (max-width: 1060px) {
+  .email-date {
+    display: none; } }
+
+@media (max-width: 720px) {
+  .main-buttons {
+    display: none; } }
