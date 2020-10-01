@@ -1,15 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url('link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  color: #696B6D; }
 
 header {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F1F3F4; }
   header .header-icon {
     max-width: 20px;
     max-height: 20px; }
@@ -77,12 +83,13 @@ header {
 /* sidebar */
 .sidebar {
   float: left;
-  width: 19%;
+  width: 14%;
+  margin-right: 10px;
   /* border: 1px solid; */
-  padding: 10px; }
+  height: calc(100vh - 100px); }
   .sidebar .compose {
     box-shadow: 0 0 1px 1px lightgray;
-    width: 120px;
+    width: 150px;
     align-items: center;
     justify-content: space-evenly;
     display: flex;
@@ -100,6 +107,12 @@ header {
     /* border: 1px solid; */
     min-height: 300px;
     overflow-y: auto; }
+    .sidebar .menu .inbox {
+      background-color: #FCE8E6;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
+    .sidebar .menu .inbox span {
+      color: #DA372C; }
     .sidebar .menu .left-tag {
       padding: 5px;
       padding-left: 15px;
@@ -111,10 +124,17 @@ header {
         width: 20px;
         margin-right: 15px; }
 
+.left-tag:hover {
+  background-color: #F1F3F4;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+
 /* meet */
 .meet {
   border-top: 2px groove lightgray;
-  border-bottom: 1px solid lightgray; }
+  border-bottom: 2px groove lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px; }
   .meet p {
     padding-left: 15px; }
   .meet .left-tag {
@@ -130,11 +150,17 @@ header {
 
 /* hangouts */
 .hangouts {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px groove lightgray;
+  padding-left: 15px;
   /* border: 1px solid; */ }
   .hangouts .hangout-user {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px; }
     .hangouts .hangout-user div:first-child {
       display: flex;
       align-items: center; }
@@ -145,7 +171,7 @@ header {
 
 /* main */
 main {
-  width: 81%;
+  width: 85%;
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
   overflow: scroll; }
@@ -162,6 +188,9 @@ main {
   margin: auto;
   margin-left: 0;
   width: 100%; }
+
+.tabs {
+  background-color: #fbfbfb; }
 
 .tabs ul {
   display: inline-flex;
@@ -351,6 +380,9 @@ main {
 .email-date {
   float: right;
   margin-right: 12px; }
+
+.list-emails {
+  background-color: #F4F7F7; }
 
 .list-emails:hover .email-date {
   display: none; }
