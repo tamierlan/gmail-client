@@ -1,29 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-$primary-color: rgb(104, 102, 102);
-$secondary-color: black;
-$padding-main: 20px;
-$size: 15px;
-$size-sm: 13px;
-$size-lg: 36px;
-$space-large: 150px;
-$text-color: grey;
-$breakpoint-tablet: 768px;
-$breakpoint-2: 960px;
+$primary-text-color: #696B6D;
+$secondary-text-color: #2A2B2E;
+$hover-color-red: #FCE8E6; 
+$primary-color-red: #D93025;
+$star-color-gold: #F4B400;
+$primary-font: 'Roboto', sans-serif;
 
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
   box-sizing: border-box;
+  color: #696B6D;
 }
 
 header {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F1F3F4;
 
   .header-icon {
     max-width: 20px;
@@ -69,7 +71,6 @@ header {
     flex: 5;
 
     input {
-      // background: url('../images/search-icon.png') no-repeat;
       background-size: 18px;
       background-position: left center;
       background-position-x: 10px;
@@ -113,14 +114,18 @@ header {
 
 /* sidebar */
 .sidebar {
+  // width: 200px;
   float: left;
-  width: 19%;
+  width: 14%;
+  margin-right: 10px;
   /* border: 1px solid; */
-  padding: 10px;
-
+  // border: 1px solid red;
+  // position: fixed;
+  height: calc(100vh - 100px);
+  
   .compose {
     box-shadow: 0 0 1px 1px lightgray;
-    width: 120px;
+    width: 150px;
     align-items: center;
     justify-content: space-evenly;
     display: flex;
@@ -144,6 +149,14 @@ header {
     /* border: 1px solid; */
     min-height: 300px;
     overflow-y: auto;
+    .inbox {
+      background-color: #FCE8E6;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .inbox span {
+      color: #DA372C;
+    }
 
     .left-tag {
       padding: 5px;
@@ -161,10 +174,18 @@ header {
   }
 }
 
+.left-tag:hover {
+  background-color: #F1F3F4;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 /* meet */
 .meet {
   border-top: 2px groove lightgray;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 2px groove lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   p {
     padding-left: 15px;
@@ -187,13 +208,19 @@ header {
 
 /* hangouts */
 .hangouts {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px groove lightgray;
+  padding-left: 15px;
 
   /* border: 1px solid; */
   .hangout-user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
+   
     div:first-child {
       display: flex;
       align-items: center;
@@ -210,7 +237,7 @@ header {
 /* main */
 main {
   // float: right;
-  width: 81%;
+  width: 85%;
   height: calc(100vh - 100px);
   margin: 10px 10px 10px 0px;
   overflow: scroll;
@@ -232,10 +259,15 @@ main {
   width: 100%;
 }
 
+.tabs {
+  background-color: #fbfbfb;;
+}
+
 .tabs ul {
   display: inline-flex;
   background: #fbfbfb;
 }
+
 
 .tabs ul li {
   width: 250px;
@@ -449,6 +481,10 @@ main {
 .email-date {
   float: right;
   margin-right: 12px;
+}
+
+.list-emails {
+  background-color: #F4F7F7;
 }
 .list-emails:hover .email-date {
   display: none;
