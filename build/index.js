@@ -6,6 +6,7 @@ var category = 'primary';
 big_bang(onePage, category);
 
 //call big bang by category
+
 var primary = function primary() {
   category = 'primary';
   big_bang(onePage, category);
@@ -28,20 +29,13 @@ var last_page = function last_page() {
   big_bang(onePage, category);
 };
 
-// triangle stuff
-// const form_button = document.querySelector('.form-button');
-// form_button.addEventListener('click', formButton)
-//
-// function formButton() {
-//   const span = document.createElement('span');
-//   const form = document.querySelector('form');
-//   span.innerHTML = 'this form';
-//   form.appendChild(span)
-// }
-
-
 //for single page avoid clicks
 var box_star_value = false;
+
+// function trashed_emails(x, name, message, date) {
+//   const li = document.createElement('li')
+//   const document.querySelector('mail-list-wrapper')
+// }
 
 function big_bang(onePage, category) {
   document.querySelector('#primary').className = '';
@@ -56,8 +50,29 @@ function big_bang(onePage, category) {
     var state = {
       gmails: res.items,
       searched: [],
-      page_info: res.items.length
+      page_info: res.items.length,
+      deleted_email: []
+
     };
+
+    var menu = document.querySelector('.menu');
+    menu.addEventListener('click', function (e) {
+      if (e.target.className.includes('trash')) {
+        document.querySelector('.mail-list-wrapper').innerHTML = '';
+        var holder = [];
+        for (var x = 0; x < state.gmails.length; x++) {
+          var get_id = localStorage.getItem('deleted' + x);
+          if (get_id) {
+            holder.push(state.gmails[x]);
+            prepare_element(category, x, state.gmails[x].senderName, state.gmails[x].messageTitle, state.gmails[x].date, state.gmails[x].senderEmail, state.gmails[x].messages[0].message);
+          }
+        }
+
+        state.gmails = holder;
+      } else if (e.target.className.includes('spam')) {
+        return;
+      }
+    });
 
     console.log(state.page_info);
 
@@ -95,9 +110,7 @@ function big_bang(onePage, category) {
     function mainLoop() {
       for (var index = 0; index < state.gmails.length; index++) {
         var dd = localStorage.getItem('deleted' + index);
-        if (dd) {
-          var fake = 'fake';
-        } else {
+        if (dd) {} else {
           prepare_element(category, index, state.gmails[index].senderName, state.gmails[index].messageTitle, state.gmails[index].date, state.gmails[index].senderEmail, state.gmails[index].messages[0].message);
         }
       }
@@ -146,7 +159,6 @@ function prepare_element(category, index, name, title, date, email, message) {
   email_date.innerHTML = '11: 02 AM';
 
   // seting attribute
-  // li.setAttribute('page', index)
   li.addEventListener('click', function () {
     single_page(index, name, title, date, email, message);
   });
@@ -158,8 +170,10 @@ function prepare_element(category, index, name, title, date, email, message) {
   function delete_one_email() {
     var del = this.getAttribute('del');
     localStorage.setItem("deleted" + del, "deleted" + del);
-    deleted_email = index;
-    big_bang(category);
+    // deleted_email = index;
+
+
+    big_bang(onePage, category);
   }
 
   // append
@@ -184,9 +198,6 @@ function prepare_element(category, index, name, title, date, email, message) {
   // li.appendChild(right_snooze_div);
   var ul = document.querySelector('.mail-list-wrapper');
   ul.appendChild(li);
-
-  // avoid clicking list items
-  // var box_star_value = false;
 
   // checkbox avoiding
   checkbox_div.addEventListener('mouseover', function hover_box() {

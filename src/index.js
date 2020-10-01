@@ -4,6 +4,7 @@ let category = 'primary'
 big_bang(onePage, category);
 
 //call big bang by category
+
 const primary = () => {
   category = 'primary';
   big_bang(onePage, category)
@@ -31,6 +32,11 @@ const last_page = () => {
 //for single page avoid clicks
 var box_star_value = false;
 
+// function trashed_emails(x, name, message, date) {
+//   const li = document.createElement('li')
+//   const document.querySelector('mail-list-wrapper')
+// }
+
 function big_bang(onePage , category) {
   document.querySelector('#primary').className = '';
   document.querySelector('#social').className = '';
@@ -44,8 +50,52 @@ function big_bang(onePage , category) {
     const state = {
       gmails: res.items,
       searched: [],
-      page_info: res.items.length
+      page_info: res.items.length,
+      deleted_email: [],
+
     };
+
+    const menu = document.querySelector('.menu')
+    menu.addEventListener('click', function(e) {
+      if (e.target.className.includes('trash')) {
+        document.querySelector('.mail-list-wrapper').innerHTML = '';
+        let holder = []
+        for (var x = 0; x < state.gmails.length; x++) {
+          const get_id = localStorage.getItem('deleted'+x)
+          if (get_id) {
+            holder.push(state.gmails[x])
+            prepare_element(
+              category,x,
+              state.gmails[x].senderName,
+              state.gmails[x].messageTitle,
+              state.gmails[x].date,
+              state.gmails[x].senderEmail,
+              state.gmails[x].messages[0].message)
+          }
+        }
+
+        state.gmails = holder
+      } else if (e.target.className.includes('spam')) {
+        return
+      }
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     console.log(state.page_info)
 
@@ -86,7 +136,7 @@ function big_bang(onePage , category) {
       for (var  index = 0; index < state.gmails.length; index++) {
         const dd = localStorage.getItem('deleted'+index);
         if (dd) {
-          var fake = 'fake'
+
         } else {
           prepare_element(
             category,
@@ -158,8 +208,10 @@ function prepare_element(category, index, name, title, date, email, message) {
   function delete_one_email() {
     const del = this.getAttribute('del');
     localStorage.setItem("deleted"+del, "deleted"+del);
-    deleted_email = index;
-    big_bang(category)
+    // deleted_email = index;
+
+
+    big_bang(onePage, category)
   }
 
   // append
