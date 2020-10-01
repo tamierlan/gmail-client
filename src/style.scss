@@ -118,6 +118,7 @@ header {
   float: left;
   min-width: 300px;
   margin-right: 10px;
+  margin-top: 10px;
   /* border: 1px solid; */
   // border: 1px solid red;
   // position: fixed;
@@ -241,6 +242,7 @@ main {
   margin: 10px 10px 10px 0px;
   overflow: scroll;
   margin-left: 300px;
+  overflow-x: hidden; 
 }
 
 /* tabs */
@@ -558,6 +560,49 @@ main {
   color: black;
 }
 
+footer{
+  // line-height: 20px;
+  letter-spacing: .3px;
+  // clear: both;
+  color: #5f6368;
+  display: flex;
+  border: 1px solid;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  font-size: .75rem;
+  a {
+    text-decoration: none;
+    color:  #5f6368;
+   }
+
+  a:hover{
+    text-decoration: underline;
+  }
+}
+
+// .footer-left, .footer-middle, .footer-right {
+//   float: left;
+// }
+
+// .footer-left {
+//   // text-align: left;
+// }
+
+.footer-middle{
+  align-self:flex-start;
+}
+
+.footer-left{
+  margin-left: 10px;
+}
+
+.footer-right{
+  margin-right: 10px;
+}
+
 @media (max-width: 1060px) {
   //  ipads and phones
   .email-date {
@@ -567,6 +612,9 @@ main {
 
 @media (max-width: 720px) {
   .main-buttons {
+    display: none;
+  }
+  footer {
     display: none;
   }
 }
