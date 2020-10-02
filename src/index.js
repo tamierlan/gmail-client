@@ -359,3 +359,18 @@ function single_page(index, name, title, date, email, message) {
     parent.appendChild(wrapper);
   }
 }
+
+//Compose pop-up
+let compose = document.querySelector('.compose');
+let pop = document.querySelector('.pop-up');
+
+
+compose.addEventListener('click', () =>{
+  pop.style.display = "block";
+})
+
+
+pop.addEventListener('click', (e)=>{
+  if(e.target.className == "btn-close")
+  pop.style.display = "none";
+})
