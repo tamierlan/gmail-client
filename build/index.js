@@ -1,6 +1,8 @@
 'use strict';
 
 // url state
+
+
 var onePage = 1;
 var category = 'primary';
 big_bang(onePage, category);
@@ -32,6 +34,11 @@ var last_page = function last_page() {
 //for single page avoid clicks
 var box_star_value = false;
 
+// function trashed_emails(x, name, message, date) {
+//   const li = document.createElement('li')
+//   const document.querySelector('mail-list-wrapper')
+// }
+
 function big_bang(onePage, category) {
   document.querySelector('#primary').className = '';
   document.querySelector('#social').className = '';
@@ -46,9 +53,42 @@ function big_bang(onePage, category) {
       gmails: res.items,
       searched: [],
       page_info: res.items.length,
-      deleted_email: []
-
+      deleted_email: [],
+      checked_all_list: false
     };
+
+    console.log(state.gmails[0]);
+
+    // check select all
+    document.querySelector('.check-all-emails').addEventListener('change', function () {
+      var icon = document.querySelector('.select-trash-all-icon');
+      state.checked_all_list = !state.checked_all_list;
+      state.checked_all_list ? icon.style.display = 'block' : icon.style.display = 'none';
+      mainLoop();
+    });
+
+    document.querySelector('.select-trash-all-icon').addEventListener('click', function () {
+      for (var x = 0; x < state.gmails.length; x++) {
+        localStorage.setItem("deleted" + x, "deleted" + x);
+      }
+      mainLoop();
+    });
+    document.querySelector('.refresh').addEventListener('click', function () {
+      for (var x = 0; x < state.gmails.length; x++) {
+        localStorage.removeItem("deleted" + x);
+        localStorage.removeItem("readed" + x);
+        localStorage.removeItem("star" + x);
+        state.checked_all_list = false;
+        document.querySelector('.check-all-emails').checked = false;
+        mainLoop();
+      }
+    });
+
+    var refreshing = document.querySelector('.refresh');
+    var go_refreshing = document.createElement('i');
+    refreshing.innerHTML = '';
+    go_refreshing.className = 'fas fa-redo-alt';
+    refreshing.appendChild(go_refreshing);
 
     var menu = document.querySelector('.menu');
     menu.addEventListener('click', function (e) {
@@ -68,8 +108,6 @@ function big_bang(onePage, category) {
         return;
       }
     });
-
-    console.log(state.page_info);
 
     var ul = document.querySelector('.mail-list-wrapper');
     ul.innerHTML = '';
@@ -103,17 +141,18 @@ function big_bang(onePage, category) {
 
     // looping each eamil
     function mainLoop() {
+      document.querySelector('.mail-list-wrapper').innerHTML = '';
       for (var index = 0; index < state.gmails.length; index++) {
         var dd = localStorage.getItem('deleted' + index);
         if (dd) {} else {
-          prepare_element(category, index, state.gmails[index].senderName, state.gmails[index].messageTitle, state.gmails[index].date, state.gmails[index].senderEmail, state.gmails[index].messages[0].message);
+          prepare_element(category, index, state.gmails[index].senderName, state.gmails[index].messageTitle, state.gmails[index].date, state.gmails[index].senderEmail, state.gmails[index].messages[0].message, state.checked_all_list);
         }
       }
     }
   });
 }
 
-function prepare_element(category, index, name, title, date, email, message) {
+function prepare_element(category, index, name, title, date, email, message, checked_ones) {
   var li = document.createElement('li');
   var dots = document.createElement('i');
   var checkbox_div = document.createElement('div');
@@ -147,29 +186,43 @@ function prepare_element(category, index, name, title, date, email, message) {
   check_box.className = 'email-check-box';
   check_box.type = 'checkBox';
   email_date.className = 'email-date';
+  sender_name.style.color = 'black';
+  message_title.style.color = 'color';
+  email_date.style.color = 'black';
+
+  if (checked_ones) {
+    check_box.checked = true;
+  }
+  if (localStorage.getItem("star" + index)) {
+    // star.style.background = 'orange';
+    star.style.color = 'red';
+  }
+  if (localStorage.getItem("readed" + index)) {
+    sender_name.style.color = 'silver';
+    message_title.style.color = 'silver';
+    email_date.style.color = 'silver';
+  }
 
   // display text
   sender_name.innerHTML = name;
   message_title.innerHTML = title;
   email_date.innerHTML = '11: 02 AM';
 
-  // seting attribute
-  li.addEventListener('click', function () {
-    single_page(index, name, title, date, email, message);
+  // deleting
+  right_delete.addEventListener('click', function () {
+    localStorage.setItem("deleted" + index, "deleted" + index);
+    big_bang(onePage, category);
   });
 
-  // deleting
-  right_delete.setAttribute('del', index);
-  right_delete.addEventListener('click', delete_one_email);
-
-  function delete_one_email() {
-    var del = this.getAttribute('del');
-    localStorage.setItem("deleted" + del, "deleted" + del);
-    // deleted_email = index;
-
-
-    big_bang(onePage, category);
-  }
+  // star
+  star_div.addEventListener('click', function () {
+    if (localStorage.getItem("star" + index)) {
+      localStorage.removeItem("star" + index);
+    } else {
+      localStorage.setItem("star" + index, "star" + index);
+      big_bang(onePage, category);
+    }
+  });
 
   // append
   checkbox_div.appendChild(check_box);
@@ -179,7 +232,6 @@ function prepare_element(category, index, name, title, date, email, message) {
   right_archive_div.appendChild(right_archive);
   right_delete_div.appendChild(right_delete);
   right_mark_div.appendChild(right_mark);
-  // right_snooze_div.appendChild(right_snooze);
   li.appendChild(dots);
   li.appendChild(checkbox_div);
   li.appendChild(star_div);
@@ -190,11 +242,11 @@ function prepare_element(category, index, name, title, date, email, message) {
   li.appendChild(right_archive_div);
   li.appendChild(right_delete_div);
   li.appendChild(right_mark_div);
-  // li.appendChild(right_snooze_div);
   var ul = document.querySelector('.mail-list-wrapper');
   ul.appendChild(li);
 
   // checkbox avoiding
+  var box_star_value = false;
   checkbox_div.addEventListener('mouseover', function hover_box() {
     box_star_value = true;
   });
@@ -233,7 +285,15 @@ function prepare_element(category, index, name, title, date, email, message) {
     box_star_value = false;
   });
 
-  // right icons
+  // setting attribute
+  li.addEventListener('click', function () {
+    if (!box_star_value) {
+      localStorage.setItem("readed" + index, "readed" + index);
+      single_page(index, name, title, date, email, message);
+    }
+  });
+
+  // RIGHT ICONS
   li.addEventListener('mouseover', function hover_right_icons() {
     right_archive_div.className = 'right-archive-div';
     right_delete_div.className = 'right-delete-div';
@@ -256,17 +316,26 @@ function prepare_element(category, index, name, title, date, email, message) {
   });
 }
 
-// single page
-function single_page(index, name, title, date, email, message) {
+//  SINGLE PAGE
+function single_page(index, name, title, dat, email, message, box_star_value) {
   if (!box_star_value) {
-    // const id = this.getAttribute('page');
-    var parent = document.querySelector('.main-emails-section');
+
+    var go_back_div = document.querySelector('.check_select');
+    var go_back = document.createElement('i');
+    go_back_div.innerHTML = '';
+    go_back.className = 'fas fa-reply';
+    go_back_div.appendChild(go_back);
+    go_back_div.addEventListener('click', function () {
+      big_bang(onePage, category);
+    });
+
+    var parent = document.querySelector('.mail-list-wrapper');
     var wrapper = document.createElement('div');
     var user_icon = document.createElement('i');
     var info_div = document.createElement('div');
     var message_title = document.createElement('h2');
     var sender_email = document.createElement('a');
-    var _date = document.createElement('a');
+    var date = document.createElement('a');
     var star_div = document.createElement('div');
     var star = document.createElement('i');
     var reply_div = document.createElement('div');
@@ -278,7 +347,7 @@ function single_page(index, name, title, date, email, message) {
     parent.innerHTML = '';
     message_title.innerHTML = _title;
     sender_email.innerHTML = email;
-    _date.innerHTML = _date;
+    date.innerHTML = dat;
     _title.innerHTML = message;
 
     wrapper.className = 'single-page';
@@ -290,12 +359,12 @@ function single_page(index, name, title, date, email, message) {
     reply.className = 'fas fa-reply';
     dots_div.className = 'dots-div';
     dots.className = 'fas fa-ellipsis-v';
-    _date.className = 'single-date';
+    date.className = 'single-date';
     _title.className = 'single-title';
 
     info_div.appendChild(message_title);
     info_div.appendChild(sender_email);
-    info_div.appendChild(_date);
+    info_div.appendChild(date);
     star_div.appendChild(star);
     info_div.appendChild(star_div);
     reply_div.appendChild(reply);
