@@ -32,11 +32,6 @@ var last_page = function last_page() {
 //for single page avoid clicks
 var box_star_value = false;
 
-// function trashed_emails(x, name, message, date) {
-//   const li = document.createElement('li')
-//   const document.querySelector('mail-list-wrapper')
-// }
-
 function big_bang(onePage, category) {
   document.querySelector('#primary').className = '';
   document.querySelector('#social').className = '';
