@@ -10,10 +10,11 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <div class="left">
-      <div><img class="header-icon" src="images/burger-menu.png" /></div>
-      <div><img class="header-icon lg" src="images/gmail-icon.png" /></div>
+      <div><img class="header-icon" src="images/burger-menu.png" alt="burger-menu" /></div>
+      <div><img class="header-icon lg" src="images/gmail-icon.png" alt="gmail-icon" /></div>
       <div>
         <p>Gmail</p>
       </div>
@@ -21,74 +22,73 @@
 
     <div class="middle">
       <div class="search-email-icon">
-          <i class="fas fa-search"></i>
+        <i class="fas fa-search"></i>
       </div>
       <input id="search" type="text" placeholder="Search mail">
-    
 
+      <!-- Form -->
       <form>
-
       </form>
 
     </div>
 
     <div class="right">
-      <img class="header-icon" src="images/question-icon.png" />
-      <img class="header-icon" src="images/settings-icon.png" />
-      <img class="header-icon" src="images/apps-icon.png" />
-      <img class="header-icon lg" src="images/user-icon.png" />
+      <img class="header-icon" src="images/question-icon.png" alt="question-menu" />
+      <img class="header-icon" src="images/settings-icon.png" alt="settings-menu" />
+      <img class="header-icon" src="images/apps-icon.png" alt="apps-icon-menu" />
+      <img class="header-icon lg" src="images/user-icon.png" alt="user-menu" />
     </div>
   </header>
+  <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="compose"><img src="./images/plus-icon.png" />Compose</div>
+    <div class="compose"><img src="./images/plus-icon.png" alt="plus-icon" />Compose</div>
 
     <div class="menu">
       <div class="inbox left-tag">
-        <img src="./images/inbox-icon.png" />
+        <img src="./images/inbox-icon.png" alt="inbox-icon" />
         <span>Inbox</span>
       </div>
       <div class="starred left-tag">
-        <img src="./images/star-icon.png" />
+        <img src="./images/star-icon.png" alt="star-icon" />
         <span>Starred</span>
       </div>
       <div class="trash left-tag">
-        <img src="./images/trash-icon.png" />
+        <img src="./images/trash-icon.png" alt="trash-icon" />
         <span>Trash</span>
       </div>
       <div class="spam left-tag">
-        <img src="images/spam-icon.png" />
+        <img src="images/spam-icon.png" alt="spam-icon" />
         <span>Spam</span>
       </div>
     </div>
 
+    <!-- Meet -->
     <div class="meet">
       <p>Meet</p>
       <div class="left-tag">
-        <img src="./images/video-icon.png" />
+        <img src="./images/video-icon.png" alt="video-icon" />
         <span>Start a meeting</span>
       </div>
       <div class="left-tag">
-        <img src="./images/meeting-icon.png" />
+        <img src="./images/meeting-icon.png" alt="meeting-icon" />
         <span>Join a meeting</span>
       </div>
     </div>
 
+    <!-- Hangouts -->
     <div class="hangouts">
       <p>Hangouts</p>
       <div class="hangout-user">
         <div>
-          <img src="./images/user-icon.png" />
+          <img src="./images/user-icon.png" alt="user-icon" />
           <span>Peter</span>
         </div>
         <div>
-          <img src="./images/plus-icon.png" />
+          <img src="./images/plus-icon.png" alt="plus-icon" />
         </div>
       </div>
-     
     </div>
   </aside>
-
-
 
 
   <!-- Main section -->
@@ -110,9 +110,7 @@
         <i class="fas fa-ellipsis-v"></i>
       </div>
       <div class="gaps"></div>
-
       <div class="page-info">
-
       </div>
       <div onclick="last_page()" class="go-back">
         <i class="fas fa-chevron-left"></i>
@@ -122,33 +120,30 @@
       </div>
     </div>
 
-    <!-- Container for tabs and email list -->
-    <!-- <div class="main-emails-section"> -->
-
-      <!-- Container for tabs-->
-      <div class="container">
-        <div class="tabs">
-          <ul>
-            <li id="primary" onclick="primary()">
-              <span class="icon">
-                <i class="fas fa-envelope-square"></i>
-              </span>
-              <span class="primary">Primary</span>
-            </li>
-            <li id="social" onclick="social()">
-              <span class="icon">
-                <i class="fas fa-user-friends"></i>
-              </span>
-              <span class="social">Social</span>
-            </li>
-            <li id="promotions" onclick="promotions()">
-              <span class="icon">
-                <i class="fas fa-splotch"></i>
-              </span>
-              <span class="promotions">Promotion</span>
-            </li>
-          </ul>
-        </div>
+    <!-- Container for tabs-->
+    <div class="container">
+      <div class="tabs">
+        <ul>
+          <li id="primary" onclick="primary()">
+            <span class="icon">
+              <i class="fas fa-envelope-square"></i>
+            </span>
+            <span class="primary">Primary</span>
+          </li>
+          <li id="social" onclick="social()">
+            <span class="icon">
+              <i class="fas fa-user-friends"></i>
+            </span>
+            <span class="social">Social</span>
+          </li>
+          <li id="promotions" onclick="promotions()">
+            <span class="icon">
+              <i class="fas fa-splotch"></i>
+            </span>
+            <span class="promotions">Promotion</span>
+          </li>
+        </ul>
+      </div>
 
       <!-- List of email-->
       <div>
@@ -159,76 +154,72 @@
 
     </div>
 
-        <!--Compose pop-up-->
-        <div class="pop-up">
-          <form onsubmit="form-compose">
-            <div class="compose-body">
-              <div class="form-group">
-                <!-- <label for="title" class="compose-title">New message</label> -->
-                <h3>New message</h3>
-                <input type="email" class="form-control" id="compose-to" placeholder="To" required />
-              </div>
-          
-              <div class="form-group">
-                <input type="text" class="form-control" id="compose-subject" placeholder="Subject" required />
-              </div>
-          
-              <div class="form-group">
-                <textarea class="form-content-control" id="compose-message" placeholder="Message" rows="10" required></textarea>
-              </div>
-                         
-            <div class="compose-footer">
-              <!-- <button type="button" id="close-btn" class="btn-close">Close</button>
-              <button type="submit" id="send-btn" class="btn-send">Send</button> -->
-
-              <input type="submit" id="send-btn" class="btn-send" value="Send">
-              <input type="submit"  id="close-btn" class="btn-close"value="Close">
-            </div>
-
+    <!--Compose pop-up-->
+    <div class="pop-up">
+      <form onsubmit="form-compose">
+        <div class="compose-body">
+          <div class="form-group">
+            <!-- <label for="title" class="compose-title">New message</label> -->
+            <h3>New message</h3>
+            <input type="email" class="form-control" id="compose-to" placeholder="To" required />
           </div>
-          </form>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="compose-subject" placeholder="Subject" required />
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-content-control" id="compose-message" placeholder="Message" rows="10"
+              required></textarea>
+          </div>
+
+          <div class="compose-footer">
+            <input type="submit" id="send-btn" class="btn-send" value="Send">
+            <input type="submit" id="close-btn" class="btn-close" value="Close">
+          </div>
+
         </div>
+      </form>
+    </div>
 
   </main>
 
+  <!-- Footer -->
   <footer>
-    <!-- <div class="footer">*/ -->
-      <div class="footer-left">
-        <div>
-         <span class="current_storage_usage">3.09 GB</span>
-         (20%) of 
-         <span class="total_storage">15 GB</span>
-          used
-         </div>
-         
-         <div class="manage_storage">
-          <a href="#">Manage</a>
-         </div>
+    <div class="footer-left">
+      <div>
+        <span class="current_storage_usage">3.09 GB</span>
+        (20%) of
+        <span class="total_storage">15 GB</span>
+        used
       </div>
 
-        <div class="footer-middle"> 
-          <span>
-            <a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Terms</a>
-            · 
+      <div class="manage_storage">
+        <a href="#">Manage</a>
+      </div>
+    </div>
 
-            <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy</a>
-            · 
-            
-            <a href="https://www.google.com/gmail/about/policy/" target="_blank">Program Policies</a>
-          </span>
+    <div class="footer-middle">
+      <span>
+        <a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Terms</a>
+        ·
+
+        <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy</a>
+        ·
+
+        <a href="https://www.google.com/gmail/about/policy/" target="_blank">Program Policies</a>
+      </span>
+    </div>
+    <div class="footer-right">
+      <div>
+        Last account activity: 2 minutes ago
       </div>
-      <div class="footer-right">
-        <div>
-          Last account activity: 2 minutes ago
-        </div>
-        <div>
-          <a href="#">Details</a>
-         </div>
+      <div>
+        <a href="#">Details</a>
       </div>
+    </div>
     <!-- </div> -->
   </footer>
-
- 
 
 </body>
 <script type="text/javascript" src="../build/index.js"></script>
