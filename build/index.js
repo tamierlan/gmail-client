@@ -314,3 +314,15 @@ function single_page(index, name, title, date, email, message) {
     parent.appendChild(wrapper);
   }
 }
+
+//Compose pop-up
+var compose = document.querySelector('.compose');
+var pop = document.querySelector('.pop-up');
+
+compose.addEventListener('click', function () {
+  pop.style.display = "block";
+});
+
+pop.addEventListener('click', function (e) {
+  if (e.target.className == "btn-close") pop.style.display = "none";
+});
