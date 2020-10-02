@@ -238,7 +238,7 @@ header {
 /* main */
 main {
   // float: right;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   margin: 10px 10px 10px 0px;
   overflow: scroll;
   margin-left: 300px;
@@ -610,6 +610,7 @@ footer{
   padding-bottom: 10px;
   font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
   font-size: .75rem;
+  margin-left: 310px;
   a {
     text-decoration: none;
     color:  #5f6368;
@@ -647,7 +648,7 @@ footer{
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 820px) {
   .main-buttons {
     display: none;
   }
